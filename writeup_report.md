@@ -108,3 +108,12 @@ The current pipeline defines a region of interest to remove a big part of the fa
 positives. It is the easy way in this project to have a reasonable project video.
 But it would not be acceptable in a real life project, as surrounding vehicles
 should be detected, wherever they are.
+
+The following options can be investigated to improve the accuracy of the vehicle detection:
+- instead of using HOG features extraction + SVM to identify if a part of the image
+  is a vehicle, we could use a Convolutional Neural Network as classifier and improve
+  its accuracy; A CNN can not only identify a car, but it can identify too a pedestrian,
+  a bicycle ... with a high accuracy.
+- having a rear or a side camera could provide valuable information; a object
+  coming from behind or from the side could be identified and could be tracked
+  with algorithm like Kalman Filter.
